@@ -5,21 +5,75 @@
 
 ---
 
-## Questão 04
-
-Resposta:
-
-## Questão 05
-
-Resposta:
-
-## Questão 06
-
-Resposta:
-
 ## Questão 07
 
-Resposta:
+Resposta: a)
+
+Código:
+
+`printf("\n\tBom dia! Shirley.");`
+
+Saída: uma quebra de linha, seguida de uma tabulação e do texto:
+
+    Bom dia! Shirley.
+
+---
+
+### b)
+
+Código:
+
+`printf("Você já tomou café? \n");`
+
+Saída:
+
+    Você já tomou café?
+
+---
+
+### c)
+
+Código:
+
+`printf("\n\nA solução não existe!\nNão insista.");`
+
+Saída:
+
+    A solução não existe!
+    Não insista.
+
+Antes de "A solução não existe!" são realizadas duas quebras de linha.
+
+---
+
+### d)
+
+Código:
+
+`printf("Duas\tlinhas\tde\tsaída\nou\tuma?");`
+
+Saída:
+
+    Duas    linhas    de    saída
+    ou      uma?
+
+O `\t` representa uma tabulação e o `\n` representa uma quebra de linha.
+
+---
+
+### e)
+
+Código:
+
+`printf("%s\n%s\n%s\n", "um", "dois", "três");`
+
+Saída:
+
+    um
+    dois
+    três
+
+O especificador `%s` é utilizado para imprimir strings.
 
 ## Questão 08
 
