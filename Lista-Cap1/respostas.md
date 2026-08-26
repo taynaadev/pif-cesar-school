@@ -5,6 +5,61 @@
 
 ---
 
+## Questão 04
+
+**Resposta:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Existem %d semanas no ano.\n", 52);
+
+    system("PAUSE");
+
+    return 0;
+}
+
+---
+
+## Questão 05
+
+**Resposta:]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Linguagem C");
+    system("pause");
+
+    return 0;
+}
+
+---
+
+## Questão 06
+
+**Resposta:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a = 1, b = 2, c = 3;
+
+    printf("Os números são: %d %d %d\n", a, b, c);
+
+    system("pause");
+
+    return 0;
+}
+
+---
+
 ## Questão 07
 
 **Resposta: a)**
