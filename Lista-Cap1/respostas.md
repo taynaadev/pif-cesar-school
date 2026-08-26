@@ -7,7 +7,10 @@
 
 ## Questão 04
 
-**Resposta:
+**Resposta:** #include <stdlib.h>;⁠ — Ponto e vírgula ⁠;⁠ incorreto na diretiva.
+ ⁠int Main()⁠ — A função ⁠main⁠ deve ser em minúsculo.
+ Parênteses ⁠(⁠ e ⁠)⁠ em vez de chaves ⁠{⁠ e ⁠}⁠ no bloco da função.
+ ⁠cout << endl;⁠ — Comando do C++, inválido em C.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,7 +28,10 @@ int main()
 
 ## Questão 05
 
-**Resposta:]
+**Resposta:** Não. O programa não compila/executa corretamente no padrão ANSI C.
+ Faltam bibliotecas: ⁠#include <stdio.h>⁠ (para ⁠printf⁠) e ⁠#include <stdlib.h>⁠ (para ⁠system⁠).
+ Falta o tipo de retorno: ⁠int main()⁠ em vez de apenas ⁠main()⁠.
+ Falta o retorno: ⁠return 0;⁠ no final do programa.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -42,7 +48,13 @@ int main()
 
 ## Questão 06
 
-**Resposta:
+**Resposta:** Erros de Sintaxe:
+ Ausência das bibliotecas ⁠<stdio.h>⁠ e ⁠<stdlib.h>⁠.
+ ⁠int main()⁠ sem o tipo de retorno ⁠int⁠.
+ ⁠int a=1; b=2; c=3;⁠ — Erro na declaração. O correto seria ⁠int a=1, b=2, c=3;⁠.
+ Erro de Lógica:
+ O ⁠printf⁠ solicita quatro inteiros (⁠%d%d%d%d⁠), mas a variável ⁠d⁠ não foi declarada nem inicializada.
+
 
 #include <stdio.h>
 #include <stdlib.h>
