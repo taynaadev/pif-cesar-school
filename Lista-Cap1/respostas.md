@@ -7,20 +7,20 @@
 
 ## Questão 04
 
-**Resposta:** #include <stdlib.h>;⁠ — Ponto e vírgula ⁠;⁠ incorreto na diretiva.
- ⁠int Main()⁠ — A função ⁠main⁠ deve ser em minúsculo.
- Parênteses ⁠(⁠ e ⁠)⁠ em vez de chaves ⁠{⁠ e ⁠}⁠ no bloco da função.
- ⁠cout << endl;⁠ — Comando do C++, inválido em C.
+**Resposta:** Erros encontrados:
+1. `#include <stdlib.h>;` — Ponto e vírgula `;` incorreto na diretiva.
+2. `int Main` — A função `main` deve ser escrita em letras minúsculas.
+3. Uso de parênteses `(` e `)` em vez de chaves `{` e `}` para delimitar o corpo da função.
+4. `printf( Existem %d semanas no ano., 52);` — Faltam as aspas duplas delimitando a string de controle do `printf`.
+5. `cout << endl;` — Comando próprio da linguagem C++, inválido na linguagem C.
 
+Código corrigido:
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
+int main() {
     printf("Existem %d semanas no ano.\n", 52);
-
     system("PAUSE");
-
     return 0;
 }
 
@@ -28,19 +28,21 @@ int main()
 
 ## Questão 05
 
-**Resposta:** Não. O programa não compila/executa corretamente no padrão ANSI C.
- Faltam bibliotecas: ⁠#include <stdio.h>⁠ (para ⁠printf⁠) e ⁠#include <stdlib.h>⁠ (para ⁠system⁠).
- Falta o tipo de retorno: ⁠int main()⁠ em vez de apenas ⁠main()⁠.
- Falta o retorno: ⁠return 0;⁠ no final do programa.
+**Respostas:** Não. O programa não compila nem executa no padrão ANSI C.
 
+Erros encontrados:
+1. A instrução `system("pause");` foi inserida FORA do bloco da função `main()` (após o fechamento da chave `}`).
+2. Ausência das bibliotecas padrão `#include <stdio.h>` e `#include <stdlib.h>`.
+3. Ausência do tipo de retorno `int` na declaração da função `main()`.
+4. Ausência da instrução de retorno `return 0;`.
+
+Código corrigido:
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
+int main() {
     printf("Linguagem C");
     system("pause");
-
     return 0;
 }
 
@@ -49,22 +51,22 @@ int main()
 ## Questão 06
 
 **Resposta:** Erros de Sintaxe:
- Ausência das bibliotecas ⁠<stdio.h>⁠ e ⁠<stdlib.h>⁠.
- ⁠int main()⁠ sem o tipo de retorno ⁠int⁠.
- ⁠int a=1; b=2; c=3;⁠ — Erro na declaração. O correto seria ⁠int a=1, b=2, c=3;⁠.
- Erro de Lógica:
- O ⁠printf⁠ solicita quatro inteiros (⁠%d%d%d%d⁠), mas a variável ⁠d⁠ não foi declarada nem inicializada.
+1. Ausência das bibliotecas `<stdio.h>` e `<stdlib.h>`.
+2. Declaração da função `main()` sem o tipo de retorno `int`.
+3. Caractere inválido `$` na declaração de variáveis (`$a=1`) e falta de vírgulas separando as variáveis. O correto é `int a = 1, b = 2, c = 3;`.
+4. Falta da aspa dupla de fechamento da string no `printf`.
 
+Erros de Lógica:
+1. O `printf` passa 4 variáveis como argumento (`a, b, c, d`), mas contém apenas 3 especificadores `%d` na string. Além disso, a variável `d` não foi declarada nem inicializada.
 
+Código corrigido:
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
+int main() {
     int a = 1, b = 2, c = 3;
 
     printf("Os números são: %d %d %d\n", a, b, c);
-
     system("pause");
 
     return 0;
@@ -77,12 +79,11 @@ int main()
 **Resposta: a)**
 
 Código:
-
-`printf("\n\tBom dia! Shirley.");`
+printf("\n\tBom dia! Shirley.");
 
 Saída: uma quebra de linha, seguida de uma tabulação e do texto:
 
-    Bom dia! Shirley.
+	Bom dia! Shirley.
 
 ---
 
@@ -151,19 +152,18 @@ Saída:
 
 ## Questão 09
 
-**Resposta:** O primeiro `printf` produz:
+**Resposta:** O compilador interpreta sequências de escape (`\n`, `\t`, `\"`) convertendo-as para seus respectivos caracteres ASCII.
 
-    "Primeiro programa
+No primeiro `printf`, são passados os caracteres de nova linha (`\n`), tabulação (`\t`) e aspas (`\"`). 
 
-O segundo `printf` possui um erro: `%c` espera um caractere, mas `"\""` é uma string.
+No segundo `printf`, o código original contém um erro de sintaxe (`"\""`), pois passa três aspas duplas seguidas. Para passar o caractere de aspas para o especificador `%c`, deve-se utilizar aspas simples: `'\"'`.
 
-Forma correta:
+Forma correta do segundo printf:
+printf("%c", '\"');
 
-`printf("%c", '\"');`
+Saída correta do programa:
 
-Saída correta:
-
-    "Primeiro programa"
+	"Primeiro programa"
 
     ---
 
@@ -178,23 +178,23 @@ C diferencia letras maiúsculas e minúsculas. Portanto, `peso`, `Peso` e `PESO`
 ## Questão 11
 
 **Resposta:**
-| Constante | Tipo |
-|---|---|
-| `\r` | char |
-| `2130` | int |
-| `-123` | int |
-| `33.28` | double |
-| `0XFA` | int |
-| `0101` | int (octal) |
-| `2.0e30` | double |
-| `\xDC` | char |
-| `'\"'` | char |
-| `'\\'` | char |
-| `'F'` | char |
-| `0` | int |
-| `'\0'` | char |
-| `"F"` | char[] |
-| `-4567.89` | double |
+Constante | Classificação | Tipo Base
+--- | --- | ---
+\r | Sequência de escape / Caractere | char
+2130 | Constante inteira decimal | int
+-123 | Constante inteira decimal | int
+33.28 | Constante de ponto flutuante | double
+0XFA | Constante inteira hexadecimal | int
+0101 | Constante inteira octal | int
+2.0e30 | Constante de ponto flutuante | double
+\xDC | Sequência de escape / Caractere | char
+\" | Sequência de escape / Caractere | char
+\\ | Sequência de escape / Caractere | char
+'F' | Constante de caractere | char
+0 | Constante inteira decimal | int
+'\0' | Constante de caractere (nulo) | char
+"F" | Constante String | char[]
+-4567.89 | Constante de ponto flutuante | double
 
 ---
 
